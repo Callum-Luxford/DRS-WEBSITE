@@ -128,7 +128,7 @@ body {
 }
 
 .btn {
-    padding: .75rem 1.5rem;
+    padding: .75rem 1rem;
     outline: none;
     border: none;
     font-size: 1rem;
@@ -143,6 +143,7 @@ body {
 .btn:hover {
     background-color: var(--btn-secondary-color);
 }
+
 
 img {
     display: flex;
@@ -258,7 +259,7 @@ nav {
     position: relative;
     isolation: isolate;
     margin-bottom: 2rem;
-    font-size: 2.75rem;
+    font-size: 2rem;
     font-weight: 800;
     color: var(--text-primary);
     line-height: 3.25rem;
@@ -290,9 +291,10 @@ nav {
 .header__content .header__links__buttons {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     margin-top: 2rem;
     padding-bottom: 2rem;
+
 }
 
 .header__content .header__links__buttons span {
@@ -345,7 +347,7 @@ i {
 
 .header__sub__title__container .sub__title i {
     opacity: .3;
-    font-size: 4rem;
+    font-size: 2rem;
 }
 
 .header__sub__title__container .sub__title h3 {
@@ -472,7 +474,7 @@ form textarea::placeholder {
     .nav__links a {
         padding-block: 5px;
         color: var(--text-dark);
-        border-bottom: 2px solid transparent;
+        border-bottom: 3px solid transparent;
     }
 
     .nav__links a:hover {
@@ -508,6 +510,16 @@ form textarea::placeholder {
         border-right: 1px solid var(--accent-color-secondary);
         border-bottom: none;
         padding: 0rem 2rem;
+    }
+
+    .header__content h1 {
+        position: relative;
+        isolation: isolate;
+        margin-bottom: 2rem;
+        font-size: 2.75rem;
+        font-weight: 800;
+        color: var(--text-primary);
+        line-height: 3.25rem;
     }
 
     .header__container .form__container {
@@ -566,7 +578,7 @@ form textarea::placeholder {
         display: flex;
         gap: 2rem;
         margin-top: 2rem;
-        justify-content: start;
+        justify-content: flex-start;
         border-bottom: none;
     }
 
