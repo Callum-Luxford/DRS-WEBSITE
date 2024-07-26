@@ -138,10 +138,12 @@ body {
     border-radius: 4px;
     transition: 0.3s;
     cursor: pointer;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.503);
 }
 
 .btn:hover {
     background-color: var(--btn-secondary-color);
+    box-shadow: none;
 }
 
 
@@ -189,6 +191,10 @@ nav {
     font-size: 1.5rem;
     color: var(--white);
     cursor: pointer;
+}
+
+.nav__remove__btn {
+    display: none;
 }
 
 .nav__links {
@@ -244,8 +250,8 @@ nav {
 
 .form__container {
     background: var(--accent-color-primary);
-    border-radius: 0rem 3rem 0rem 3rem;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.808);
+    border-radius: 3rem 0rem 3rem 0rem;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.515);
 }
 
 .header__content {
@@ -320,10 +326,12 @@ i {
     padding: 2rem;
 }
 
+
 .header__container .form__container form {
     display: grid;
     grid-template-columns: repeat(1, auto);
     gap: 1rem;
+    margin: .5rem auto;
 }
 
 .header__container .form__container h1 {
@@ -423,6 +431,10 @@ form textarea::placeholder {
     line-height: 1.75rem;
 }
 
+.form__container:hover {
+    transform: translateY(-20px);
+}
+
 @media (width > 540px) {
     .steps__grid {
         grid-template-columns: repeat(2, 1fr);
@@ -507,7 +519,7 @@ form textarea::placeholder {
         grid-area: 1/1;
         text-align: start;
         /* max-width: 32rem; */
-        border-right: 1px solid var(--accent-color-secondary);
+        /* border-right: 1px solid var(--accent-color-secondary); */
         border-bottom: none;
         padding: 0rem 2rem;
     }
@@ -591,3 +603,4 @@ form textarea::placeholder {
     }
 
 }
+
