@@ -172,18 +172,19 @@ body {
     background-color: var(--text-light);
 }
 
+#btnScrollToTop.show {
+    /* transform: scale(1); */
+    transform: translateY(0);
+}
+
 #btnScrollToTop:hover {
-    transform: translateY(-0.25rem);
+    transform: translateY(-0.5rem);
 }
 
 /* .hide {
     display: none;
 } */
 
-#btnScrollToTop.show {
-    /* transform: scale(1); */
-    transform: translateY(0);
-}
 
 img {
     display: flex;
