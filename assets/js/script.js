@@ -1,3 +1,5 @@
+
+// Header Nav Toggle
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
@@ -13,7 +15,10 @@ navLinks.addEventListener("click", (e) => {
   navLinks.classList.remove("open");
   menuBtnIcon.setAttribute("class", "ri-menu-line");
 });
+// Header Nav Toggle End
 
+
+// Scroll Reveal
 const scrollRevealOption = {
   distance: "50px",
   origin: "bottom",
@@ -51,13 +56,15 @@ ScrollReveal().reveal(".header__sub__title__container", {
   ...scrollRevealOption2,
   origin: "left",
 });
+// End Scroll Reveal
 
-// scroll button
+
+// ScrollToTop button
 const btnScrollToTop = document.querySelector("#btnScrollToTop");
 
 btnScrollToTop.addEventListener("click", function () {
     btnScrollToTop.classList.add("hide");
-    $("html, body").animate({ scrollTop: 0 }, "smooth");
+    $("html, body").animate({ scrollTop: 0 }, "fast");
 });
 
 window.onscroll = () => {
@@ -75,3 +82,4 @@ function scrollFunction() {
     btnScrollToTop.classList.remove("show");
   }
 }
+// End ScrollToTop button 
