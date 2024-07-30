@@ -305,7 +305,7 @@ nav {
 
 .form__container {
     /* background: var(--accent-color-primary); */
-    background-color: #222831f3;
+    background-color: #000000cc;
     border-radius: 3rem 0rem 3rem 0rem;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.515);
 }
@@ -339,6 +339,7 @@ nav {
 .header__content p {
     margin-bottom: 2rem;
     font-weight: 500;
+    font-size: 1.4rem;
     color: var(--text-extra-light);
     line-height: 1.75rem;
 }
@@ -423,17 +424,23 @@ i {
     align-self: center;
 }
 
+form input {
+    height: 2rem;
+}
+
 form input,
 textarea {
-    border-radius: 1px;
+    border-radius: 5px;
     border: none;
     background-color: var(--secondary-color);
     color: var(--accent-color-secondary);
+    caret-color: var(--text-extra-light);
+    opacity: .6;
 }
 
 form input::placeholder,
 textarea::placeholder {
-    color: var(--accent-color-secondary);
+    color: var(--text-extra-light);
     padding-left: .5rem;
 }
 
