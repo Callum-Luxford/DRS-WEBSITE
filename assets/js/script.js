@@ -56,7 +56,7 @@ ScrollReveal().reveal(".header__sub__title__container", {
 const btnScrollToTop = document.querySelector("#btnScrollToTop");
 
 btnScrollToTop.addEventListener("click", function () {
-  btnScrollToTop.style.display = "none";
+    btnScrollToTop.classList.add("hide");
     $("html, body").animate({ scrollTop: 0 }, "slow");
 });
 
@@ -66,11 +66,12 @@ window.onscroll = () => {
 
 function scrollFunction() {
   if (
-    document.body.scrollTop > 300 ||
-    document.documentElement.scrollTop > 300
+    window.scrollY > 200
   ) {
-    btnScrollToTop.style.display = "block";
+    // btnScrollToTop.style.display = "block";
+    btnScrollToTop.classList.add("show")
   } else {
-    btnScrollToTop.style.display = "none";
+    // btnScrollToTop.style.display = "none";
+    btnScrollToTop.classList.remove("show");
   }
 }
