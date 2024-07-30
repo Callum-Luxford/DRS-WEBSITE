@@ -64,7 +64,7 @@ const btnScrollToTop = document.querySelector("#btnScrollToTop");
 
 btnScrollToTop.addEventListener("click", function () {
     btnScrollToTop.classList.add("hide");
-    $("html, body").animate({ scrollTop: 0 }, "fast");
+    $("html, body").animate({ scrollTop: 0 }, 100);
 });
 
 window.onscroll = () => {
