@@ -126,7 +126,7 @@ body {
     font-weight: 800;
     color: var(--primary-color);
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .btn {
@@ -141,6 +141,7 @@ body {
     transition: 0.3s;
     cursor: pointer;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.503);
+    max-height: 3rem;
 }
 
 .btn:hover {
@@ -498,6 +499,10 @@ form textarea::placeholder {
     background-color: var(--accent-color-primary);
 }
 
+.services__container {
+    display: grid;
+}
+
 .services__grid {
     display: grid;
     gap: 2rem;
@@ -534,6 +539,104 @@ form textarea::placeholder {
     margin-bottom: 1rem;
 }
 
+.footer__wrapper {
+    background-color: var(--secondary-color);
+}
+
+.footer__container {
+    display: grid;
+}
+
+.footer__grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.footer__services {
+    display: grid;
+    gap: 2rem;
+    align-content: start;
+}
+
+.footer__container .footer__header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--btn-primary-color);
+}
+
+.footer__services ul {
+    display: grid;
+    gap: .5rem;
+}
+
+.footer__services ul a {
+    color: var(--text-extra-light);
+    margin-left: .2rem;
+}
+
+.footer__contact {
+    display: grid;
+    gap: 2rem;
+    /* justify-content: center; */
+    /* text-align: center; */
+}
+
+.footer__links__buttons {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.footer__links__buttons {
+    gap: 1rem;
+    max-width: fit-content;
+    justify-self: start;
+}
+
+.footer__links__buttons span {
+    padding-left: .5rem;
+}
+
+.footer__social__links i {
+    color: #00ADB5;
+}
+
+.footer__links__buttons .btn__secondary,
+i {
+    color: var(--text-extra-light);
+}
+
+.footer__contact .contact__items {
+    display: flex;
+}
+
+.contact__items ul {
+    display: grid;
+    gap: .5rem;
+}
+
+.contact__items li {
+    display: flex;
+    color: var(--primary-color);
+}
+
+.contact__items ul a {
+    color: var(--text-extra-light);
+    margin-left: .4rem;
+}
+
+.contact__items ul i {
+    color: var(--btn-primary-color);
+    margin-right: .4rem;
+}
+
+.copyright__container {
+    background-color: var(--btn-primary-color);
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    color: var(--text-extra-light);
+}
+
 @media (width > 540px) {
     .card__grid {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -546,6 +649,24 @@ form textarea::placeholder {
     .services__grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
+
+    .footer__grid {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+
+    /* .footer__form__container {
+        max-width: 435px;
+    } */
+
+    .footer__container,
+    .footer__contact,
+    .contact__item {
+        text-align: start;
+    }
+
+    /* .footer__contact {
+        grid-column: 3;
+    } */
 }
 
 @media (width > 894px) {
