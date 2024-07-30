@@ -10,46 +10,67 @@ menuBtn.addEventListener("click", (e) => {
 });
 
 navLinks.addEventListener("click", (e) => {
-    navLinks.classList.remove("open");
-    menuBtnIcon.setAttribute("class", "ri-menu-line");
+  navLinks.classList.remove("open");
+  menuBtnIcon.setAttribute("class", "ri-menu-line");
 });
 
-
 const scrollRevealOption = {
-    distance: "50px",
-    origin: "bottom",
-    duration: 1000,
+  distance: "50px",
+  origin: "bottom",
+  duration: 1000,
 };
 
 const scrollRevealOption2 = {
-    distance: "1000px",
-    origin: "bottom",
-    duration: 100,
+  distance: "1000px",
+  origin: "bottom",
+  duration: 100,
 };
 
 ScrollReveal().reveal(".form__container", {
-    ...scrollRevealOption,
-    origin: "right",
-    delay: 250,
+  ...scrollRevealOption,
+  origin: "right",
+  delay: 250,
 });
 ScrollReveal().reveal(".header__content h1", {
-    ...scrollRevealOption,
-    delay: 500,
+  ...scrollRevealOption,
+  delay: 500,
 });
 ScrollReveal().reveal(".header__content p", {
-    ...scrollRevealOption,
-    delay: 750,
+  ...scrollRevealOption,
+  delay: 750,
 });
 ScrollReveal().reveal(".header__links", {
-    ...scrollRevealOption,
-    delay: 1000,
+  ...scrollRevealOption,
+  delay: 1000,
 });
 ScrollReveal().reveal(".header__links__buttons", {
-    ...scrollRevealOption,
-    delay: 1250,
+  ...scrollRevealOption,
+  delay: 1250,
 });
 ScrollReveal().reveal(".header__sub__title__container", {
-    ...scrollRevealOption2,
-    origin: "left",
+  ...scrollRevealOption2,
+  origin: "left",
 });
 
+// scroll button
+const btnScrollToTop = document.querySelector("#btnScrollToTop");
+
+btnScrollToTop.addEventListener("click", function () {
+  btnScrollToTop.style.display = "none";
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+});
+
+window.onscroll = () => {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 300 ||
+    document.documentElement.scrollTop > 300
+  ) {
+    btnScrollToTop.style.display = "block";
+  } else {
+    btnScrollToTop.style.display = "none";
+  }
+}

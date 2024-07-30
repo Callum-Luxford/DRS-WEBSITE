@@ -148,6 +148,34 @@ body {
     box-shadow: none;
 }
 
+#btnScrollToTop {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    background: var(--text-dark);
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    color: white;
+    outline: none;
+    cursor: pointer;
+    z-index: 1000;
+    transition: bottom 0.3s, transform 0.3s;
+}
+
+#btnScrollToTop:active {
+    background-color: var(--text-light);
+}
+
+#btnScrollToTop:hover {
+    transform: translateY(-0.25rem);
+}
+
+.hidden {
+    display: none;
+}
 
 img {
     display: flex;
@@ -476,7 +504,10 @@ form textarea::placeholder {
     transition: .3s;
     gap: 1rem;
     border-bottom: 1rem solid var(--text-light);
-    pointer-events: none;
+}
+
+.services__card:hover {
+    transform: translateY(-10px);
 }
 
 .services__card h4 {
@@ -506,7 +537,7 @@ form textarea::placeholder {
     }
 
     .services__grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
 
@@ -668,4 +699,3 @@ form textarea::placeholder {
     }
 
 }
-
