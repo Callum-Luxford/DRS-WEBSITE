@@ -276,7 +276,7 @@ nav {
 
 .home__wrapper {
     /* background-color: var(--secondary-color); */
-    background-image: url(/assets/images/new-build-roof-image.jpg);
+    background-image: url(../images/new-build-roof-image.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
