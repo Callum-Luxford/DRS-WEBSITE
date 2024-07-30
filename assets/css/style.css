@@ -672,14 +672,14 @@ i {
         grid-template-columns: repeat(2, minmax(200px, 1fr));
     }
 
-    /* .footer__form__container {
-        max-width: 435px;
-    } */
-
     .footer__container,
     .footer__grid {
         text-align: start;
     }
+
+    /* .footer__form__container {
+        max-width: 435px;
+    } */
 
     /* .footer__contact {
         grid-column: 3;

@@ -1,4 +1,3 @@
-
 // Header Nav Toggle
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
@@ -64,7 +63,7 @@ const btnScrollToTop = document.querySelector("#btnScrollToTop");
 
 btnScrollToTop.addEventListener("click", function () {
     btnScrollToTop.classList.add("hide");
-    $("html, body").animate({ scrollTop: 0 }, 100);
+    $("html, body").animate({ scrollTop: 0 }, "fast");
 });
 
 window.onscroll = () => {
