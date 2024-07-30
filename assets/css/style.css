@@ -141,7 +141,7 @@ body {
     transition: 0.3s;
     cursor: pointer;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.503);
-    max-height: 3rem;
+    max-height: 4rem;
 }
 
 .btn:hover {
@@ -578,7 +578,7 @@ form textarea::placeholder {
 
 .footer__services {
     display: grid;
-    gap: 2rem;
+    gap: 1.5rem;
     align-content: start;
 }
 
@@ -590,7 +590,7 @@ form textarea::placeholder {
 
 .footer__services ul {
     display: grid;
-    gap: .5rem;
+    gap: 1rem;
 }
 
 .footer__services ul a {
@@ -600,20 +600,14 @@ form textarea::placeholder {
 
 .footer__contact {
     display: grid;
-    gap: 2rem;
-    /* justify-content: center; */
-    /* text-align: center; */
+    gap: 1.5rem;
 }
 
 .footer__links__buttons {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-}
-
-.footer__links__buttons {
-    gap: 1rem;
+    display: flex;
+    align-items: end;
     max-width: fit-content;
-    justify-self: start;
+    max-height: fit-content;
 }
 
 .footer__links__buttons span {
@@ -635,7 +629,7 @@ i {
 
 .contact__items ul {
     display: grid;
-    gap: .5rem;
+    gap: 1rem;
 }
 
 .contact__items li {
@@ -683,8 +677,7 @@ i {
     } */
 
     .footer__container,
-    .footer__contact,
-    .contact__item {
+    .footer__grid {
         text-align: start;
     }
 
