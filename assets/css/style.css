@@ -432,16 +432,15 @@ form input,
 textarea {
     border-radius: 5px;
     border: none;
-    background-color: var(--secondary-color);
-    color: var(--accent-color-secondary);
+    background-color: #393e46b5;
+    color: var(--text-extra-light);
     caret-color: var(--text-extra-light);
-    opacity: .6;
+    padding-left: .5rem;
 }
 
 form input::placeholder,
 textarea::placeholder {
     color: var(--text-extra-light);
-    padding-left: .5rem;
 }
 
 form textarea::placeholder {
