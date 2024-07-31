@@ -177,9 +177,9 @@ body {
     transform: translateY(0);
 }
 
-#btnScrollToTop:hover {
+/* #btnScrollToTop:hover {
     transform: translateY(-0.5rem);
-}
+} */
 
 /* .hide {
     display: none;
@@ -842,6 +842,10 @@ i {
 
     .section__container .header__container {
         max-width: 100%;
+    }
+
+    #btnScrollToTop:hover {
+        transform: translateY(-0.5rem);
     }
 
 }
