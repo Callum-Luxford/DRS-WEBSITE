@@ -152,9 +152,9 @@ inputs.forEach((input) => {
     validateInputs();
   });
 });
+// End Form Validation
 
-
-// Pop Up
+// Pop Up For User Upon Submission
 const popup = document.getElementById("popup");
 const blur = document.getElementById("blur");
 
@@ -166,8 +166,9 @@ function closePopup() {
   popup.classList.remove("open-popup");
   blur.classList.remove("blur__container");
 }
+// End Pop Up For User Upon Submission
 
-// Web3form
+// Web3form API
 const form = document.getElementById("my__form");
 const result = document.getElementById("result");
 
@@ -206,3 +207,4 @@ form.addEventListener("submit", function (e) {
       }, 3000);
     });
 });
+// End Web3form API
