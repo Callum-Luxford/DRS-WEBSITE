@@ -16,7 +16,6 @@ navLinks.addEventListener("click", (e) => {
 });
 // Header Nav Toggle End
 
-
 // Scroll Reveal
 const scrollRevealOption = {
   distance: "50px",
@@ -57,13 +56,12 @@ ScrollReveal().reveal(".header__sub__title__container", {
 });
 // End Scroll Reveal
 
-
 // ScrollToTop button
 const btnScrollToTop = document.querySelector("#btnScrollToTop");
 
 btnScrollToTop.addEventListener("click", function () {
-    btnScrollToTop.classList.add("hide");
-    $("html, body").animate({ scrollTop: 0 }, "fast");
+  btnScrollToTop.classList.add("hide");
+  $("html, body").animate({ scrollTop: 0 }, "fast");
 });
 
 window.onscroll = () => {
@@ -71,14 +69,108 @@ window.onscroll = () => {
 };
 
 function scrollFunction() {
-  if (
-    window.scrollY > 200
-  ) {
+  if (window.scrollY > 200) {
     // btnScrollToTop.style.display = "block";
-    btnScrollToTop.classList.add("show")
+    btnScrollToTop.classList.add("show");
   } else {
     // btnScrollToTop.style.display = "none";
     btnScrollToTop.classList.remove("show");
   }
 }
-// End ScrollToTop button 
+// End ScrollToTop button
+
+
+
+// Form Validation
+const formSubmit = document.getElementById("submit");
+const formNameInput = document.querySelector('input[name="name"]');
+const formPhone = document.querySelector('input[name="tel"]');
+const formEmail = document.querySelector('input[name="email"]');
+const formMessage = document.querySelector('textarea[name="message"]');
+const errorMessagesDiv = document.getElementById("error__message");
+
+const inputs = [formNameInput, formPhone, formEmail, formMessage];
+
+isFormValid = false;
+
+const removeError = (e) => {
+  e.classList.remove("invalid");
+  
+};
+
+const addError = (e) => {
+  e.classList.add("invalid");
+};
+
+const addErrorMessage = (e) => {
+  errorMessagesDiv.style.display = "block";
+  e.classList.add("error__message");
+};
+
+const removeErrorMessage = (e) => {
+  errorMessagesDiv.style.display = "none";
+  e.classList.remove("error__message");
+};
+
+const validateInputs = () => {
+  isFormValid = true;
+  inputs.forEach(removeError);
+
+  if (!formNameInput.value) {
+    addError(formNameInput);
+    isFormValid = false;
+    addErrorMessage(errorMessagesDiv);
+  }
+
+  if (!formPhone.value) {
+    isFormValid = false;
+    addError(formPhone);
+    addErrorMessage(errorMessagesDiv);
+  }
+
+  if (!formEmail.value) {
+    isFormValid = false;
+    addError(formEmail);
+    addErrorMessage(errorMessagesDiv);
+  }
+
+  if (!formMessage.value) {
+    isFormValid = false;
+    addError(formMessage);
+    addErrorMessage(errorMessagesDiv);
+  }
+
+  else {
+    removeErrorMessage(errorMessagesDiv);
+  }
+
+};
+
+formSubmit.addEventListener("click", (e) => {
+  // e.preventDefault();
+  validateInputs();
+  console.log("here");
+});
+
+inputs.forEach(input => {
+  input.addEventListener("input", () => {
+    validateInputs();
+  });
+});
+
+
+
+// Pop Up
+
+// const popup = document.getElementById("popup");
+// const blur = document.getElementById("blur");
+
+// function openPopup() {
+//   popup.classList.add("open-popup");
+//   blur.classList.add('blur__container')
+// };
+
+// function closePopup() {
+//   popup.classList.remove("open-popup");
+//   blur.classList.remove("blur__container")
+// };
