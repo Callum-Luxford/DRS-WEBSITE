@@ -79,8 +79,6 @@ function scrollFunction() {
 }
 // End ScrollToTop button
 
-
-
 // Form Validation
 const formSubmit = document.getElementById("submit");
 const formNameInput = document.querySelector('input[name="name"]');
@@ -95,7 +93,6 @@ isFormValid = false;
 
 const removeError = (e) => {
   e.classList.remove("invalid");
-  
 };
 
 const addError = (e) => {
@@ -115,6 +112,7 @@ const removeErrorMessage = (e) => {
 const validateInputs = () => {
   isFormValid = true;
   inputs.forEach(removeError);
+  removeErrorMessage(errorMessagesDiv);
 
   if (!formNameInput.value) {
     addError(formNameInput);
@@ -138,12 +136,9 @@ const validateInputs = () => {
     isFormValid = false;
     addError(formMessage);
     addErrorMessage(errorMessagesDiv);
+  } else {
+    // removeErrorMessage(errorMessagesDiv);
   }
-
-  else {
-    removeErrorMessage(errorMessagesDiv);
-  }
-
 };
 
 formSubmit.addEventListener("click", (e) => {
@@ -152,25 +147,62 @@ formSubmit.addEventListener("click", (e) => {
   console.log("here");
 });
 
-inputs.forEach(input => {
+inputs.forEach((input) => {
   input.addEventListener("input", () => {
     validateInputs();
   });
 });
 
 
-
 // Pop Up
+const popup = document.getElementById("popup");
+const blur = document.getElementById("blur");
 
-// const popup = document.getElementById("popup");
-// const blur = document.getElementById("blur");
+function openPopup() {
+  popup.classList.add("open-popup");
+  blur.classList.add("blur__container");
+}
+function closePopup() {
+  popup.classList.remove("open-popup");
+  blur.classList.remove("blur__container");
+}
 
-// function openPopup() {
-//   popup.classList.add("open-popup");
-//   blur.classList.add('blur__container')
-// };
+// Web3form
+const form = document.getElementById("my__form");
+const result = document.getElementById("result");
 
-// function closePopup() {
-//   popup.classList.remove("open-popup");
-//   blur.classList.remove("blur__container")
-// };
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  result.innerHTML = "Please wait...";
+
+  fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: json,
+  })
+    .then(async (response) => {
+      let json = await response.json();
+      if (response.status == 200) {
+        result.innerHTML = json.message;
+      } else {
+        console.log(response);
+        result.innerHTML = json.message;
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+      result.innerHTML = "Something went wrong!";
+    })
+    .then(function () {
+      form.reset();
+      setTimeout(() => {
+        result.style.display = "none";
+      }, 3000);
+    });
+});

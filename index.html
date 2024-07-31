@@ -53,15 +53,19 @@
                 <h1 class="form__heading">
                     <span>CONTACT US FOR A FREE<br>QUOTE NOW</span>
                 </h1>
+                <!-- setTimeout(function () {window.location.reload();},500); this.submit(); this.reset(); return false; -->
+                <form id="my__form" onsubmit="openPopup();" method="POST">
 
-                <form id="my__form" action="https://api.web3forms.com/submit" onsubmit="setTimeout(function () {window.location.reload();},500); this.submit(); this.reset(); return false;" method="POST">
                     <input type="hidden" name="access_key" value="5c60b310-b952-4c87-a9cf-08390ac08ea2">
+                    <input type="checkbox" name="botcheck" id="" style="display: none;">
+                    <!-- <input type="hidden" name="redirect" value="http://127.0.0.1:5500/index.html"> -->
 
                     <input type="text" id="name" name="name" autofocus  placeholder="Name*" required/>
                     <input type="tel" name="tel" placeholder="Phone*" required/>
                     <input type="email" id="email" name="email" placeholder="Email*" required/>
                     <textarea rows="5" cols="60" name="message" id="message" placeholder="Message*" required></textarea>
                 </form>
+                <div id="result"></div>
                 <div id="error__message" class="error__message">All fields are required.</div>
                 <button type="submit" form="my__form" class="btn btn__secondary" id="submit" onclick="">Submit</button>
             </div>
