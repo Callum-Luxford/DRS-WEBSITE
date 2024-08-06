@@ -30,6 +30,9 @@
     --max-width: 1200px;
     --gradient: linear-gradient(to bottom, #393E46, #393E46);
 
+    --z-index-wrapper: -10;
+    --z-index-overlay: -5;
+
 }
 
 /* Box sizing rules */
@@ -439,7 +442,7 @@ i {
 }
 
 .header__sub__title__container .sub__title i {
-    opacity: .3;
+    opacity: .5;
     font-size: var(--fs-large);
 }
 
@@ -605,6 +608,82 @@ form textarea::placeholder {
 
 /* End Services Content */
 
+/* Why Content */
+
+.why__section__wrapper {
+    /* background-color: var(--secondary-color); */
+    background-image: url(../images/L-VISW-streetscene-SAND-21-001.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: var(--z-index-wrapper);
+}
+
+.why__section__wrapper::before {
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    opacity: .7;
+    z-index: var(--z-index-overlay);
+}
+
+.why__container {
+    display: grid;
+}
+
+.why__grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.why__card {
+    text-align: center;
+    background-color: var(--text-light);
+    padding: 0rem 0rem 1rem 0rem;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.49);
+    transition: .3s;
+    gap: 1rem;
+    border-bottom: 1rem solid var(--primary-color);
+}
+
+.why__card:hover {
+    transform: translateY(-10px);
+}
+
+.why__container h2 {
+    color: var(--text-extra-light);
+}
+
+.why__card h4 {
+    margin-bottom: 0rem;
+    font-size: var(--fs-mmedium);
+    font-weight: 800;
+    color: var(--text-extra-light);
+}
+
+.why__card p {
+    color: var(--text-extra-light);
+    line-height: 1.75rem;
+    padding: 1rem 1rem;
+}
+
+.why__card .why__image img{
+    display: inline-block;
+    margin: 2rem 0;
+    padding: 10px 17px;
+    max-width: 7rem;
+    justify-items: center;
+    filter: invert(46%) sepia(88%) saturate(2884%) hue-rotate(152deg) brightness(99%) contrast(101%);
+}
+
+/* End Why Content */
+
 /* Footer Content */
 
 .footer__wrapper {
@@ -714,6 +793,9 @@ i {
     }
 
     .services__grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .why__grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
@@ -875,7 +957,7 @@ i {
     }
 
     .header__sub__title__container .sub__title i {
-        opacity: .3;
+        opacity: .5;
         font-size: 4rem;
         display: flex;
     }
