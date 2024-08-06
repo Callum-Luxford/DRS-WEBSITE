@@ -909,6 +909,9 @@ i {
         font-weight: 800;
         color: var(--text-primary);
         line-height: 3.25rem;
+
+        /* Min width for the type writer effect to not effect the div size. */
+        min-width: 400px;
     }
 
     .header__container .form__container {
