@@ -81,7 +81,7 @@ function scrollFunction() {
 
 // Type Writer
 var typed = new Typed(".auto-type", {
-  strings: ["PROFESSIONAL,", "COMMERCIAL,", "CONTRACTORS!"],
+  strings: ["PROFESSIONAL", "COMMERCIAL", "CONTRACTORS!"],
   typeSpeed: 100,
   backSpeed: 100,
   loop: true
