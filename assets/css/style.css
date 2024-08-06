@@ -244,6 +244,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     background-color: var(--secondary-color);
+    border-bottom: 3px solid var(--btn-primary-color);
     /* box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2); */
     /* background-color: var(--text-extra-light); */
 }
@@ -843,6 +844,7 @@ i {
         align-items: center;
         justify-content: space-between;
         gap: 2rem;
+        border-bottom: 5px solid var(--btn-primary-color);
     }
 
     .nav__header {
@@ -850,6 +852,7 @@ i {
         padding: 0;
         background-color: transparent;
         justify-content: center;
+        border-bottom: none;
     }
 
     .nav__logo img {
