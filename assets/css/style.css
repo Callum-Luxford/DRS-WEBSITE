@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Reset And Root Variables */
 :root {
     --ff-primary: "Be Vietnam Pro", sans-serif;
 
@@ -14,6 +15,15 @@
     --text-extra-light: #f2f2f2;
     --white: #ffffff;
 
+
+    --fs-xsmall: ;
+    --fs-small: ;
+    --fs-medium: 1rem;
+    --fs-mmedium: 1.25rem;
+    --fs-xmedium: 1.5rem;
+    --fs-large: 2rem;
+    --fs-xlarge: 2.75rem;
+    
     --btn-primary-color: #00ADB5;
     --btn-secondary-color: #00656b;
 
@@ -98,7 +108,12 @@ svg {
     }
 } */
 
+
+/* Reset And Root Variables */
+
+
 /* General Styling */
+
 body {
     font-family: var(--ff-primary);
 }
@@ -115,14 +130,14 @@ body {
 
 .section__subheader {
     margin-bottom: .5rem;
-    font-size: 1rem;
+    font-size: var(--fs-medium);
     font-weight: 600;
     color: var(--text-extra-light);
     letter-spacing: 1px;
 }
 
 .section__header {
-    font-size: 2rem;
+    font-size: var(--fs-large);
     font-weight: 800;
     color: var(--primary-color);
     text-align: center;
@@ -133,7 +148,7 @@ body {
     padding: .75rem 1rem;
     outline: none;
     border: none;
-    font-size: 1rem;
+    font-size: var(--fs-medium);
     color: var(--white);
     background-color: var(--btn-primary-color);
     white-space: nowrap;
@@ -148,6 +163,10 @@ body {
     background-color: var(--btn-secondary-color);
     box-shadow: none;
 }
+
+/* End General Styling */
+
+/* Button Scroll to top */
 
 #btnScrollToTop {
     position: fixed;
@@ -185,6 +204,10 @@ body {
     display: none;
 } */
 
+/* End Button Scroll to top */
+
+
+/* Header/Nav */
 
 img {
     display: flex;
@@ -221,13 +244,13 @@ nav {
 }
 
 .nav__logo a {
-    font-size: 1.5rem;
+    font-size: var(--fs-xmedium);
     font-weight: 700;
     color: var(--white);
 }
 
 .nav__menu__btn {
-    font-size: 1.5rem;
+    font-size: var(--fs-xmedium);
     color: var(--white);
     cursor: pointer;
 }
@@ -274,6 +297,10 @@ nav {
 /* .btn {
     display: none;
 } */
+
+/* End Header/Nav */
+
+/* Home Content */
 
 .home__wrapper {
     /* background-color: var(--secondary-color); */
@@ -322,7 +349,7 @@ nav {
     position: relative;
     isolation: isolate;
     margin-bottom: 2rem;
-    font-size: 2rem;
+    font-size: var(--fs-large);
     font-weight: 800;
     color: var(--text-primary);
     line-height: 3.25rem;
@@ -340,7 +367,7 @@ nav {
 .header__content p {
     margin-bottom: 2rem;
     font-weight: 500;
-    font-size: 1.4rem;
+    font-size: var(--fs-xmedium);
     color: var(--text-extra-light);
     line-height: 1.75rem;
 }
@@ -393,7 +420,7 @@ i {
 }
 
 .header__container .form__container h1 {
-    font-size: 1.5rem;
+    font-size: var(--fs-xmedium);
     font-weight: 600;
     color: var(--text-extra-light);
     align-self: center;
@@ -408,12 +435,12 @@ i {
 .header__sub__title__container .sub__title {
     text-align: center;
     font-style: italic;
-    font-size: 1rem;
+    font-size: var(--fs-medium);
 }
 
 .header__sub__title__container .sub__title i {
     opacity: .3;
-    font-size: 2rem;
+    font-size: var(--fs-large);
 }
 
 .header__sub__title__container .sub__title h3 {
@@ -448,6 +475,10 @@ form textarea::placeholder {
     opacity: .5;
 }
 
+/* End Home Content */
+
+/* About content */
+
 .about__grid {
     margin: 4rem auto;
     display: grid;
@@ -461,13 +492,17 @@ form textarea::placeholder {
 .about__container p {
     text-align: center;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: var(--fs-medium);
 }
 
 .about__container .text__highlight {
     color: var(--primary-color);
     font-weight: 600;
 }
+
+/* End About content */
+
+/* Card Content */
 
 .card__container :is(.section__subheader, .section__header) {
     text-align: center;
@@ -506,7 +541,7 @@ form textarea::placeholder {
 
 .card__card h4 {
     margin-bottom: 1rem;
-    font-size: 1.25rem;
+    font-size: var(--fs-mmedium);
     font-weight: 800;
     color: var(--primary-color);
 }
@@ -523,6 +558,10 @@ form textarea::placeholder {
 .card__wrapper {
     background-color: var(--accent-color-primary);
 }
+
+/* End Card Content */
+
+/* Services Content */
 
 .services__container {
     display: grid;
@@ -549,7 +588,7 @@ form textarea::placeholder {
 
 .services__card h4 {
     margin-bottom: 0rem;
-    font-size: 1.25rem;
+    font-size: var(--fs-mmedium);
     font-weight: 800;
     color: var(--text-extra-light);
 }
@@ -563,6 +602,10 @@ form textarea::placeholder {
 .services__card img {
     margin-bottom: 1rem;
 }
+
+/* End Services Content */
+
+/* Footer Content */
 
 .footer__wrapper {
     background-color: var(--secondary-color);
@@ -584,7 +627,7 @@ form textarea::placeholder {
 }
 
 .footer__container .footer__header {
-    font-size: 1.5rem;
+    font-size: var(--fs-xmedium);
     font-weight: 600;
     color: var(--btn-primary-color);
 }
@@ -655,6 +698,11 @@ i {
     padding: 1rem;
     color: var(--text-extra-light);
 }
+
+/* End Footer Content */
+
+
+/* MEDIA QUERIES FOR DESKTOP AND TABLETS */
 
 @media (width > 540px) {
     .card__grid {
@@ -774,7 +822,7 @@ i {
         position: relative;
         isolation: isolate;
         margin-bottom: 2rem;
-        font-size: 2.75rem;
+        font-size: var(--fs-xlarge);
         font-weight: 800;
         color: var(--text-primary);
         line-height: 3.25rem;
@@ -796,7 +844,7 @@ i {
     }
 
     .header__container .form__container h1 {
-        font-size: 1.5rem;
+        font-size: var(--fs-xmedium);
         font-weight: 600;
         color: var(--text-extra-light);
         align-self: center;
@@ -850,6 +898,8 @@ i {
 
 }
 
+/* END MEDIA QUERIES FOR DESKTOP AND TABLETS */
+
 
 
 /* -------------- POP UP AFTER SUBMIT FORM ---------------  */
@@ -891,7 +941,7 @@ i {
 }
 
 .popup h2 {
-    font-size: 2rem;
+    font-size: var(--fs-large);
     font-weight: 600;
     margin: 30px 0 10px;
 }
@@ -932,3 +982,4 @@ i {
     border: 1px solid red;
 }
 
+/* -------------- END POP UP AFTER SUBMIT FORM ---------------  */
