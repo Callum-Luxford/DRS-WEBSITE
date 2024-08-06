@@ -23,7 +23,7 @@
     --fs-xmedium: 1.5rem;
     --fs-large: 2rem;
     --fs-xlarge: 2.75rem;
-    
+
     --btn-primary-color: #00ADB5;
     --btn-secondary-color: #00656b;
 
@@ -244,6 +244,10 @@ nav {
     align-items: center;
     justify-content: space-between;
     background-color: var(--primary-color);
+}
+
+.nav__logo {
+    max-width: 150px;
 }
 
 .nav__logo a {
@@ -675,7 +679,7 @@ form textarea::placeholder {
     padding: 1rem 1rem;
 }
 
-.why__card .why__image img{
+.why__card .why__image img {
     display: inline-block;
     margin: 2rem 0;
     padding: 10px 17px;
@@ -797,6 +801,7 @@ i {
     .services__grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
+
     .why__grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
@@ -827,7 +832,7 @@ i {
 
     nav {
         position: static;
-        padding-block: 2rem;
+        padding-block: .1rem;
         padding-inline: 1rem;
         /* max-width: 100%; */
         margin-inline: auto;
@@ -841,6 +846,11 @@ i {
         flex: 1;
         padding: 0;
         background-color: transparent;
+        justify-content: center;
+    }
+
+    .nav__logo {
+        max-width: 200px;
     }
 
     .nav__logo a {
@@ -1006,7 +1016,7 @@ i {
     position: fixed;
     top: 0;
     left: 50%;
-    transform: translate(-50%,-50%) scale(0.1);
+    transform: translate(-50%, -50%) scale(0.1);
     text-align: center;
     padding: 0, 30px 30px;
     color: #333;
@@ -1047,7 +1057,7 @@ i {
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-.popup button:active  {
+.popup button:active {
     background-color: #52a136;
     box-shadow: none;
 }
