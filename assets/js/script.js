@@ -2,6 +2,7 @@
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
+const navHeader = document.querySelector("nav__header");
 
 menuBtn.addEventListener("click", (e) => {
   navLinks.classList.toggle("open");
@@ -81,7 +82,7 @@ function scrollFunction() {
 
 // Type Writer
 var typed = new Typed(".auto-type", {
-  strings: ["PROFESSIONAL", "COMMERCIAL", "CONTRACTORS!"],
+  strings: ["PROFESSIONAL.", "COMMERCIAL.", "CONTRACTORS!"],
   typeSpeed: 100,
   backSpeed: 100,
   loop: true
