@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Reset And Root Variables */
 :root {
     --ff-primary: "Be Vietnam Pro", sans-serif;
 
@@ -14,11 +15,23 @@
     --text-extra-light: #f2f2f2;
     --white: #ffffff;
 
+
+    --fs-xsmall: ;
+    --fs-small: ;
+    --fs-medium: 1rem;
+    --fs-mmedium: 1.25rem;
+    --fs-xmedium: 1.5rem;
+    --fs-large: 2rem;
+    --fs-xlarge: 2.75rem;
+
     --btn-primary-color: #00ADB5;
     --btn-secondary-color: #00656b;
 
     --max-width: 1200px;
     --gradient: linear-gradient(to bottom, #393E46, #393E46);
+
+    --z-index-wrapper: -10;
+    --z-index-overlay: -5;
 
 }
 
@@ -98,7 +111,12 @@ svg {
     }
 } */
 
+
+/* Reset And Root Variables */
+
+
 /* General Styling */
+
 body {
     font-family: var(--ff-primary);
 }
@@ -115,14 +133,14 @@ body {
 
 .section__subheader {
     margin-bottom: .5rem;
-    font-size: 1rem;
+    font-size: var(--fs-medium);
     font-weight: 600;
     color: var(--text-extra-light);
     letter-spacing: 1px;
 }
 
 .section__header {
-    font-size: 2rem;
+    font-size: var(--fs-large);
     font-weight: 800;
     color: var(--primary-color);
     text-align: center;
@@ -133,7 +151,7 @@ body {
     padding: .75rem 1rem;
     outline: none;
     border: none;
-    font-size: 1rem;
+    font-size: var(--fs-medium);
     color: var(--white);
     background-color: var(--btn-primary-color);
     white-space: nowrap;
@@ -148,6 +166,10 @@ body {
     background-color: var(--btn-secondary-color);
     box-shadow: none;
 }
+
+/* End General Styling */
+
+/* Button Scroll to top */
 
 #btnScrollToTop {
     position: fixed;
@@ -185,6 +207,10 @@ body {
     display: none;
 } */
 
+/* End Button Scroll to top */
+
+
+/* Header/Nav */
 
 img {
     display: flex;
@@ -220,14 +246,18 @@ nav {
     background-color: var(--primary-color);
 }
 
+.nav__logo {
+    max-width: 150px;
+}
+
 .nav__logo a {
-    font-size: 1.5rem;
+    font-size: var(--fs-xmedium);
     font-weight: 700;
     color: var(--white);
 }
 
 .nav__menu__btn {
-    font-size: 1.5rem;
+    font-size: var(--fs-xmedium);
     color: var(--white);
     cursor: pointer;
 }
@@ -275,6 +305,10 @@ nav {
     display: none;
 } */
 
+/* End Header/Nav */
+
+/* Home Content */
+
 .home__wrapper {
     /* background-color: var(--secondary-color); */
     background-image: url(../images/new-build-roof-image.jpg);
@@ -282,6 +316,7 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    /* background-attachment: fixed; */
 }
 
 .home__wrapper::before {
@@ -322,7 +357,7 @@ nav {
     position: relative;
     isolation: isolate;
     margin-bottom: 2rem;
-    font-size: 2rem;
+    font-size: var(--fs-large);
     font-weight: 800;
     color: var(--text-primary);
     line-height: 3.25rem;
@@ -340,7 +375,7 @@ nav {
 .header__content p {
     margin-bottom: 2rem;
     font-weight: 500;
-    font-size: 1.4rem;
+    font-size: var(--fs-xmedium);
     color: var(--text-extra-light);
     line-height: 1.75rem;
 }
@@ -393,7 +428,7 @@ i {
 }
 
 .header__container .form__container h1 {
-    font-size: 1.5rem;
+    font-size: var(--fs-xmedium);
     font-weight: 600;
     color: var(--text-extra-light);
     align-self: center;
@@ -408,12 +443,12 @@ i {
 .header__sub__title__container .sub__title {
     text-align: center;
     font-style: italic;
-    font-size: 1rem;
+    font-size: var(--fs-medium);
 }
 
 .header__sub__title__container .sub__title i {
-    opacity: .3;
-    font-size: 2rem;
+    opacity: .5;
+    font-size: var(--fs-large);
 }
 
 .header__sub__title__container .sub__title h3 {
@@ -448,6 +483,10 @@ form textarea::placeholder {
     opacity: .5;
 }
 
+/* End Home Content */
+
+/* About content */
+
 .about__grid {
     margin: 4rem auto;
     display: grid;
@@ -461,13 +500,17 @@ form textarea::placeholder {
 .about__container p {
     text-align: center;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: var(--fs-medium);
 }
 
 .about__container .text__highlight {
     color: var(--primary-color);
     font-weight: 600;
 }
+
+/* End About content */
+
+/* Card Content */
 
 .card__container :is(.section__subheader, .section__header) {
     text-align: center;
@@ -506,7 +549,7 @@ form textarea::placeholder {
 
 .card__card h4 {
     margin-bottom: 1rem;
-    font-size: 1.25rem;
+    font-size: var(--fs-mmedium);
     font-weight: 800;
     color: var(--primary-color);
 }
@@ -523,6 +566,10 @@ form textarea::placeholder {
 .card__wrapper {
     background-color: var(--accent-color-primary);
 }
+
+/* End Card Content */
+
+/* Services Content */
 
 .services__container {
     display: grid;
@@ -549,7 +596,7 @@ form textarea::placeholder {
 
 .services__card h4 {
     margin-bottom: 0rem;
-    font-size: 1.25rem;
+    font-size: var(--fs-mmedium);
     font-weight: 800;
     color: var(--text-extra-light);
 }
@@ -563,6 +610,87 @@ form textarea::placeholder {
 .services__card img {
     margin-bottom: 1rem;
 }
+
+/* End Services Content */
+
+/* Why Content */
+
+.why__section__wrapper {
+    /* background-color: var(--secondary-color); */
+    background-image: url(../images/L-VISW-streetscene-SAND-21-001.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: var(--z-index-wrapper);
+    background-attachment: fixed;
+}
+
+.why__section__wrapper::before {
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    opacity: .7;
+    z-index: var(--z-index-overlay);
+}
+
+.why__container {
+    display: grid;
+}
+
+.why__grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.why__card {
+    text-align: center;
+    background-color: var(--text-light);
+    padding: 0rem 0rem 1rem 0rem;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.49);
+    transition: .3s;
+    gap: 1rem;
+    border-bottom: 1rem solid var(--primary-color);
+}
+
+.why__card:hover {
+    transform: translateY(-10px);
+}
+
+.why__container h2 {
+    color: var(--text-extra-light);
+}
+
+.why__card h4 {
+    margin-bottom: 0rem;
+    font-size: var(--fs-mmedium);
+    font-weight: 800;
+    color: var(--text-extra-light);
+}
+
+.why__card p {
+    color: var(--text-extra-light);
+    line-height: 1.75rem;
+    padding: 1rem 1rem;
+}
+
+.why__card .why__image img {
+    display: inline-block;
+    margin: 2rem 0;
+    padding: 10px 17px;
+    max-width: 7rem;
+    justify-items: center;
+    filter: invert(46%) sepia(88%) saturate(2884%) hue-rotate(152deg) brightness(99%) contrast(101%);
+}
+
+/* End Why Content */
+
+/* Footer Content */
 
 .footer__wrapper {
     background-color: var(--secondary-color);
@@ -584,7 +712,7 @@ form textarea::placeholder {
 }
 
 .footer__container .footer__header {
-    font-size: 1.5rem;
+    font-size: var(--fs-xmedium);
     font-weight: 600;
     color: var(--btn-primary-color);
 }
@@ -656,6 +784,11 @@ i {
     color: var(--text-extra-light);
 }
 
+/* End Footer Content */
+
+
+/* MEDIA QUERIES FOR DESKTOP AND TABLETS */
+
 @media (width > 540px) {
     .card__grid {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -666,6 +799,10 @@ i {
     }
 
     .services__grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .why__grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
@@ -695,7 +832,7 @@ i {
 
     nav {
         position: static;
-        padding-block: 2rem;
+        padding-block: .1rem;
         padding-inline: 1rem;
         /* max-width: 100%; */
         margin-inline: auto;
@@ -709,6 +846,11 @@ i {
         flex: 1;
         padding: 0;
         background-color: transparent;
+        justify-content: center;
+    }
+
+    .nav__logo {
+        max-width: 200px;
     }
 
     .nav__logo a {
@@ -774,10 +916,13 @@ i {
         position: relative;
         isolation: isolate;
         margin-bottom: 2rem;
-        font-size: 2.75rem;
+        font-size: var(--fs-xlarge);
         font-weight: 800;
         color: var(--text-primary);
         line-height: 3.25rem;
+
+        /* Min width for the type writer effect to not effect the div size. */
+        min-width: 400px;
     }
 
     .header__container .form__container {
@@ -796,7 +941,7 @@ i {
     }
 
     .header__container .form__container h1 {
-        font-size: 1.5rem;
+        font-size: var(--fs-xmedium);
         font-weight: 600;
         color: var(--text-extra-light);
         align-self: center;
@@ -827,7 +972,7 @@ i {
     }
 
     .header__sub__title__container .sub__title i {
-        opacity: .3;
+        opacity: .5;
         font-size: 4rem;
         display: flex;
     }
@@ -850,6 +995,8 @@ i {
 
 }
 
+/* END MEDIA QUERIES FOR DESKTOP AND TABLETS */
+
 
 
 /* -------------- POP UP AFTER SUBMIT FORM ---------------  */
@@ -869,7 +1016,7 @@ i {
     position: fixed;
     top: 0;
     left: 50%;
-    transform: translate(-50%,-50%) scale(0.1);
+    transform: translate(-50%, -50%) scale(0.1);
     text-align: center;
     padding: 0, 30px 30px;
     color: #333;
@@ -891,7 +1038,7 @@ i {
 }
 
 .popup h2 {
-    font-size: 2rem;
+    font-size: var(--fs-large);
     font-weight: 600;
     margin: 30px 0 10px;
 }
@@ -910,7 +1057,7 @@ i {
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-.popup button:active  {
+.popup button:active {
     background-color: #52a136;
     box-shadow: none;
 }
@@ -932,3 +1079,4 @@ i {
     border: 1px solid red;
 }
 
+/* -------------- END POP UP AFTER SUBMIT FORM ---------------  */

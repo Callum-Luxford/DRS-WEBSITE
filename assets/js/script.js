@@ -79,6 +79,16 @@ function scrollFunction() {
 }
 // End ScrollToTop button
 
+// Type Writer
+var typed = new Typed(".auto-type", {
+  strings: ["PROFESSIONAL", "COMMERCIAL", "CONTRACTORS!"],
+  typeSpeed: 100,
+  backSpeed: 100,
+  loop: true
+})
+// End Type Writer
+
+
 // Form Validation
 const formSubmit = document.getElementById("submit");
 const formNameInput = document.querySelector('input[name="name"]');

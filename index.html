@@ -19,7 +19,7 @@
         <nav>
             <div class="nav__header">
                 <div class="nav__logo">
-                    <a href="#">DynamicRoofing</a>
+                    <a href="#"><img src="assets/images/400dpiLogo.png" alt=""></a>
                 </div>
                 <div class="nav__menu__btn" id="menu-btn">
                     <i class="ri-menu-line"></i>
@@ -60,9 +60,9 @@
                     <input type="checkbox" name="botcheck" id="" style="display: none;">
                     <!-- <input type="hidden" name="redirect" value="http://127.0.0.1:5500/index.html"> -->
 
-                    <input type="text" id="name" name="name" autofocus  placeholder="Name*" required/>
-                    <input type="tel" name="tel" placeholder="Phone*" required/>
-                    <input type="email" id="email" name="email" placeholder="Email*" required/>
+                    <input type="text" id="name" name="name" autofocus placeholder="Name*" required />
+                    <input type="tel" name="tel" placeholder="Phone*" required />
+                    <input type="email" id="email" name="email" placeholder="Email*" required />
                     <textarea rows="5" cols="60" name="message" id="message" placeholder="Message*" required></textarea>
                 </form>
                 <div id="result"></div>
@@ -71,7 +71,7 @@
             </div>
 
             <div class="header__content">
-                <h1>PROFESSIONAL COMMERCIAL CONTRACTORS</h1>
+                <h1><span class="auto-type"></span> <br></h1>
                 <p>
                     Dynamic Roofing Solutions are professional roofing contractors with
                     years of experience in the industry. Based in Essex operating
@@ -114,7 +114,7 @@
     </div>
 
     <section class="section__container about__container" id="company">
-        <h2 class="section__header">WELOCME TO DYNAMIC ROOFING SOLUTIONS LTD</h2>
+        <h2 class="section__header">WELCOME TO DYNAMIC ROOFING SOLUTIONS LTD</h2>
         <p class=""><span class="text__highlight">Dynamic Roofing Solutions Ltd</span> specializes in providing
             top-quality commercial roofing services with a focus on
             excellence, reliability, and exceptional customer service. Our expert team ensures every project is
@@ -166,9 +166,9 @@
         <h2 class="section__header">SERVICES</h2>
         <div class="services__grid">
             <div class="services__card">
-                <div class="services__image">
+                <span class="services__image">
                     <img src="assets/images/commercial-roofing-systems-1042x675.png.webp" alt="">
-                </div>
+                </span>
                 <div class="services__content">
                     <h4>Roof Repair</h4>
                     <p>
@@ -245,6 +245,54 @@
             </div>
         </div>
     </section>
+
+    <div class="why__section__wrapper">
+        <section class="section__container why__container" id="services">
+            <h2 class="section__header">WHY CHOOSE US?</h2>
+            <div class="why__grid">
+                <div class="why__card">
+                    <div class="why__image">
+                        <img src="assets/images/users.256x180.png" alt="">
+                    </div>
+                    <div class="why__content">
+                        <h4>Professional Team</h4>
+                        <p>
+                            We are a dedicated team of professionals with passion for excellence. Our collaborative
+                            approach ensures high-quality results, making us a reliable and trusted partner for your
+                            needs.
+                        </p>
+                    </div>
+                </div>
+                <div class="why__card">
+                    <div class="why__image">
+                        <img src="assets/images/page-star.221x256.png" alt="">
+                    </div>
+                    <div class="why__content">
+                        <h4>40 Years Experience</h4>
+                        <p>
+                            With over 40 years of experience, our team brings unmatched expertise and dedication to
+                            every
+                            project. Our long history of success speaks to our reliability and commitment to excellence.
+                        </p>
+                    </div>
+                </div>
+                <div class="why__card">
+                    <div class="why__image">
+                        <img src="assets/images/alternate-map-marked.256x228.png" alt="">
+                    </div>
+                    <div class="why__content">
+                        <h4>Nationwide Coverage</h4>
+                        <p>
+                            With nationwide coverage, our team is always within reach, ready to provide exceptional
+                            service
+                            wherever you are. Our
+                            extensive network ensures consistent quality and reliability across the country.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <!-- <div class="footer__form__container">
         <h1 class="form__heading">
@@ -311,7 +359,7 @@
                         </ul>
                         <div class="footer__links__buttons">
                             <button class="btn btn-secondary">
-                                <i  class="bi bi-telephone-fill icon-phone"><span>01782519873<span></i>
+                                <i class="bi bi-telephone-fill icon-phone"><span>01782519873<span></i>
                             </button>
                         </div>
                     </div>
@@ -331,7 +379,11 @@
         <button class="" type="button" onclick="closePopup()">OK</button>
     </div>
 
+    <!-- Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Type Writer js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </body>
 
 </html>
