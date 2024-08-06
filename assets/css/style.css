@@ -618,6 +618,7 @@ form textarea::placeholder {
     background-size: cover;
     position: relative;
     z-index: var(--z-index-wrapper);
+    background-attachment: fixed;
 }
 
 .why__section__wrapper::before {
