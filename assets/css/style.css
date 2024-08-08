@@ -348,11 +348,13 @@ nav {
     background-color: #000000cc;
     border-radius: 3rem 0rem 3rem 0rem;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.515);
+    /* max-width: 500px; */
 }
 
 /* Form hover div (no inteference with SRjs) */
-/* .form__container__grab {
+ .form__container__grab {
     display: grid;
+    justify-items: center;
     grid-row: 2;
     position: relative;
     transition: .3s;
@@ -360,8 +362,7 @@ nav {
 
 .form__container__grab:hover {
     translate: 0px -5px;
-} */
-
+} 
 /* End Form hover div (no inteference with SRjs) */
 
 .header__content {
@@ -957,12 +958,12 @@ i {
         padding: 2rem;
     }
 
-    /* .form__container__grab {
+    .form__container__grab {
         display: grid;
         grid-row: 1;
         position: relative;
         transition: .3s;
-    } */
+    }
 
     .header__container .form__container form {
         display: grid;
