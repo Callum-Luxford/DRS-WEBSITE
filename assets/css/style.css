@@ -348,6 +348,11 @@ nav {
     background-color: #000000cc;
     border-radius: 3rem 0rem 3rem 0rem;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.515);
+    transition: .3s;
+}
+
+.form__container:hover {
+    translate: 0px -5px;
 }
 
 .header__content {
@@ -422,7 +427,6 @@ i {
     gap: 1rem;
     padding: 2rem;
 }
-
 
 .header__container .form__container form {
     display: grid;
@@ -536,6 +540,7 @@ form textarea::placeholder {
     padding: 1rem .5rem;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.49);
     transition: .3s;
+    border-bottom: 1rem solid var(--btn-primary-color);
 }
 
 .card__card:hover {
@@ -586,7 +591,7 @@ form textarea::placeholder {
 
 .services__card {
     text-align: center;
-    background-color: var(--primary-color);
+    background-color: var(--btn-primary-color);
     padding: 0rem 0rem 1rem 0rem;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.49);
     transition: .3s;
