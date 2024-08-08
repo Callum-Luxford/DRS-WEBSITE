@@ -626,8 +626,13 @@ form textarea::placeholder {
     padding: 1rem 1rem;
 }
 
+.services__card .services__image {
+    
+}
+
 .services__card img {
     margin-bottom: 1rem;
+    object-fit: fill;
 }
 
 /* End Services Content */
