@@ -351,13 +351,17 @@ nav {
 }
 
 /* Form hover div (no inteference with SRjs) */
-.form__container__grab {
+/* .form__container__grab {
+    display: grid;
+    grid-row: 2;
+    position: relative;
     transition: .3s;
 }
 
 .form__container__grab:hover {
     translate: 0px -5px;
-}
+} */
+
 /* End Form hover div (no inteference with SRjs) */
 
 .header__content {
@@ -952,6 +956,13 @@ i {
         gap: 1rem;
         padding: 2rem;
     }
+
+    /* .form__container__grab {
+        display: grid;
+        grid-row: 1;
+        position: relative;
+        transition: .3s;
+    } */
 
     .header__container .form__container form {
         display: grid;
