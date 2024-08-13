@@ -502,10 +502,8 @@ form textarea::placeholder {
 }
 
 .h-captcha {
-    display: flex;
-    justify-content: center;
-    /* margin-top: -3rem;
-    margin-bottom: -1rem; */
+    transform: scale(0.75);
+    justify-self: center;
 }
 
 /* .file__btn {
