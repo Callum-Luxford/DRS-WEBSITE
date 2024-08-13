@@ -504,11 +504,11 @@ form textarea::placeholder {
 .h-captcha {
     display: flex;
     justify-content: center;
-    margin-top: -3rem;
-    margin-bottom: -1rem;
+    /* margin-top: -3rem;
+    margin-bottom: -1rem; */
 }
 
-.file__btn {
+/* .file__btn {
     display: flex;
     align-items: center;
     width: fit-content;
@@ -524,7 +524,7 @@ form textarea::placeholder {
     width: 1rem;
     margin: 0 0 0 1rem;
     filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(188deg) brightness(103%) contrast(102%);
-}
+} */
 
 /* End Home Content */
 
