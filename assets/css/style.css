@@ -504,6 +504,26 @@ form textarea::placeholder {
 .h-captcha {
     display: flex;
     justify-content: center;
+    margin-top: -3rem;
+    margin-bottom: -1rem;
+}
+
+.file__btn {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    color: var(--white);
+    background-color: #393e46b5;
+    border-radius: 5px;
+    padding: .5rem;
+    cursor: pointer;
+    justify-self: center;
+}
+
+.file__btn img {
+    width: 1rem;
+    margin: 0 0 0 1rem;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(188deg) brightness(103%) contrast(102%);
 }
 
 /* End Home Content */

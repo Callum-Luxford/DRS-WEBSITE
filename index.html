@@ -66,6 +66,9 @@
                         <input type="email" id="email" name="email" placeholder="Email*" required />
                         <textarea rows="5" cols="60" name="message" id="message" placeholder="Message*"
                             required></textarea>
+                        
+                        <label for="files" class="file__btn">Upload image*<img src="assets/icons/upload.svg" alt=""></label>
+                        <input type="file" id="files" name="files" style="visibility: hidden;">
 
                         <div class="h-captcha" data-captcha="true"></div>
                         <!-- <div class="h-captcha" data-captcha="true" data-lang="de" data-theme="dark" data-onload="myFunction"
@@ -398,7 +401,7 @@
 
     <!-- Step 2: Add the Web3Forms script -->
     <script src="https://web3forms.com/client/script.js" async defer></script>
-    
+
 </body>
 
 </html>
