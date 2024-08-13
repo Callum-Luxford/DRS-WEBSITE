@@ -97,7 +97,7 @@ const formEmail = document.querySelector('input[name="email"]');
 const formMessage = document.querySelector('textarea[name="message"]');
 const errorMessagesDiv = document.getElementById("error__message");
 
-const inputs = [formNameInput, formPhone, formEmail];
+const inputs = [formNameInput, formPhone, formEmail, formMessage];
 
 isFormValid = false;
 
@@ -181,6 +181,7 @@ function openPopup() {
 function closePopup() {
   popup.classList.remove("open-popup");
   blur.classList.remove("blur__container");
+  location.reload();
 }
 // End Pop Up For User Upon Submission
 
