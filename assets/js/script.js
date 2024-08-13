@@ -152,6 +152,8 @@ const validateInputs = () => {
 formSubmit.addEventListener("click", (e) => {
   // e.preventDefault();
   validateInputs();
+
+  // insert captcha here
   const hCaptcha = form.querySelector(
     "textarea[name=h-captcha-response]"
   ).value;
@@ -160,6 +162,7 @@ formSubmit.addEventListener("click", (e) => {
     alert("Please fill out captcha field");
     return;
   }
+  // End insert captcha here
   console.log("here");
 });
 
