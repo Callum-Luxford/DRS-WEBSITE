@@ -85,10 +85,9 @@ var typed = new Typed(".auto-type", {
   strings: ["PROFESSIONAL.", "COMMERCIAL.", "CONTRACTORS!"],
   typeSpeed: 100,
   backSpeed: 100,
-  loop: true
-})
+  loop: true,
+});
 // End Type Writer
-
 
 // Form Validation
 const formSubmit = document.getElementById("submit");
@@ -98,7 +97,7 @@ const formEmail = document.querySelector('input[name="email"]');
 const formMessage = document.querySelector('textarea[name="message"]');
 const errorMessagesDiv = document.getElementById("error__message");
 
-const inputs = [formNameInput, formPhone, formEmail, formMessage];
+const inputs = [formNameInput, formPhone, formEmail];
 
 isFormValid = false;
 
@@ -147,14 +146,20 @@ const validateInputs = () => {
     isFormValid = false;
     addError(formMessage);
     addErrorMessage(errorMessagesDiv);
-  } else {
-    // removeErrorMessage(errorMessagesDiv);
   }
 };
 
 formSubmit.addEventListener("click", (e) => {
   // e.preventDefault();
   validateInputs();
+  const hCaptcha = form.querySelector(
+    "textarea[name=h-captcha-response]"
+  ).value;
+  if (!hCaptcha) {
+    e.preventDefault();
+    alert("Please fill out captcha field");
+    return;
+  }
   console.log("here");
 });
 

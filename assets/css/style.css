@@ -501,6 +501,11 @@ form textarea::placeholder {
     opacity: .5;
 }
 
+.h-captcha {
+    display: flex;
+    justify-content: center;
+}
+
 /* End Home Content */
 
 /* About content */
@@ -1114,5 +1119,4 @@ i {
 .invalid {
     border: 1px solid red;
 }
-
 /* -------------- END POP UP AFTER SUBMIT FORM ---------------  */

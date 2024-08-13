@@ -66,6 +66,11 @@
                         <input type="email" id="email" name="email" placeholder="Email*" required />
                         <textarea rows="5" cols="60" name="message" id="message" placeholder="Message*"
                             required></textarea>
+
+                        <div class="h-captcha" data-captcha="true"></div>
+                        <!-- <div class="h-captcha" data-captcha="true" data-lang="de" data-theme="dark" data-onload="myFunction"
+                            data-render="explicit" data-size="compact"></div> -->
+
                     </form>
                     <div id="result"></div>
                     <div id="error__message" class="error__message">All fields are required.</div>
@@ -390,6 +395,10 @@
 
     <!-- Type Writer js -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Step 2: Add the Web3Forms script -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    
 </body>
 
 </html>
