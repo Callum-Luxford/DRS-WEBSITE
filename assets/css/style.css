@@ -352,7 +352,7 @@ nav {
 }
 
 /* Form hover div (no inteference with SRjs) */
- .form__container__grab {
+.form__container__grab {
     display: grid;
     justify-items: center;
     grid-row: 2;
@@ -362,7 +362,7 @@ nav {
 
 .form__container__grab:hover {
     translate: 0px -5px;
-} 
+}
 /* End Form hover div (no inteference with SRjs) */
 
 .header__content {
@@ -504,6 +504,8 @@ form textarea::placeholder {
 .h-captcha {
     transform: scale(0.75);
     justify-self: center;
+    margin: 0;
+    padding: 0;
 }
 
 /* .file__btn {
@@ -647,10 +649,6 @@ form textarea::placeholder {
     color: var(--text-extra-light);
     line-height: 1.75rem;
     padding: 1rem 1rem;
-}
-
-.services__card .services__image {
-    
 }
 
 .services__card img {
@@ -868,6 +866,13 @@ i {
 
     /* .footer__contact {
         grid-column: 3;
+    } */
+
+    /* .h-captcha {
+        transform: scale(0.80);
+        justify-self: center;
+        margin: 0;
+        padding: 0;
     } */
 }
 
@@ -1137,4 +1142,5 @@ i {
 .invalid {
     border: 1px solid red;
 }
+
 /* -------------- END POP UP AFTER SUBMIT FORM ---------------  */
