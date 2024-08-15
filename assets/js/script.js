@@ -149,28 +149,31 @@ const validateInputs = () => {
   }
 };
 
-formSubmit.addEventListener("click", (e) => {
-  // e.preventDefault();
-  validateInputs();
-
-  // insert captcha here
-  const hCaptcha = form.querySelector(
-    "textarea[name=h-captcha-response]"
-  ).value;
-  if (!hCaptcha) {
-    e.preventDefault();
-    alert("Please fill out captcha field");
-    return;
-  }
-  // End insert captcha here
-  console.log("here");
-});
-
 inputs.forEach((input) => {
   input.addEventListener("input", () => {
     validateInputs();
   });
 });
+
+formSubmit.addEventListener("click", (e) => {
+  // e.preventDefault();
+  validateInputs();
+
+  // insert captcha here
+
+  // const hCaptcha = form.querySelector(
+  //   "textarea[name=g-recaptcha-response]"
+  // ).value;
+  // if (!hCaptcha) {
+  //   e.preventDefault();
+  //   alert("Please fill out captcha field");
+  //   return;
+  // }
+
+  // End insert captcha here
+  console.log("here");
+});
+
 // End Form Validation
 
 // Pop Up For User Upon Submission
@@ -189,42 +192,114 @@ function closePopup() {
 // End Pop Up For User Upon Submission
 
 // Web3form API
-const form = document.getElementById("my__form");
-const result = document.getElementById("result");
+// const form = document.getElementById("my__form");
+// const result = document.getElementById("result");
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-  const formData = new FormData(form);
-  const object = Object.fromEntries(formData);
-  const json = JSON.stringify(object);
-  result.innerHTML = "Please wait...";
+// form.addEventListener("submit", function (e) {
+//   e.preventDefault();
+//   const formData = new FormData(form);
+//   const object = Object.fromEntries(formData);
+//   const json = JSON.stringify(object);
+//   result.innerHTML = "Please wait...";
 
-  fetch("https://api.web3forms.com/submit", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-    body: json,
-  })
-    .then(async (response) => {
-      let json = await response.json();
-      if (response.status == 200) {
-        result.innerHTML = json.message;
-      } else {
-        console.log(response);
-        result.innerHTML = json.message;
-      }
-    })
-    .catch((error) => {
-      console.log(error);
-      result.innerHTML = "Something went wrong!";
-    })
-    .then(function () {
-      form.reset();
-      setTimeout(() => {
-        result.style.display = "none";
-      }, 3000);
-    });
-});
+//   fetch("https://api.web3forms.com/submit", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//       Accept: "application/json",
+//     },
+//     body: json,
+//   })
+//     .then(async (response) => {
+//       let json = await response.json();
+//       if (response.status == 200) {
+//         result.innerHTML = json.message;
+//       } else {
+//         console.log(response);
+//         result.innerHTML = json.message;
+//       }
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//       result.innerHTML = "Something went wrong!";
+//     })
+//     .then(function () {
+//       form.reset();
+//       setTimeout(() => {
+//         result.style.display = "none";
+//       }, 3000);
+//     });
+// });
 // End Web3form API
+
+
+// FORM DATA (Version of forms without WEB3)
+
+// Connecting to google app script for POST AND GET and validations.
+const url =
+  "https://script.google.com/macros/s/AKfycbzJlI91zRpecgt_W3Yx4GmK0coZ4yvDHT8HygJnhATq71l2aVhQnGAqdiYD-n2pk2ob/exec";
+const form = document.getElementById("my__form");
+
+// Validations for the form inside of html
+form.addEventListener('submit', submitter);
+function submitter(e) {
+  console.log('submitted');
+  e.preventDefault();
+  let message = "";
+  if(formNameInput.value.length < 3) {
+    message += `<br>- Name needs to be more than 3 characters.`;
+  }
+  if(formEmail.value.length < 5) {
+    message += `<br>- Email needs to be a valid email.`;
+  }
+  if (formPhone.value.length < 11) {
+    message += `<br>- Phone needs to be a valid UK Number.`;
+  }
+  if(formMessage.value.length < 20) {
+    message += `<br>- Message needs to be greater than 20 characters`;
+  }
+  if(message) {
+    const div = document.createElement('div');
+    div.innerHTML = message;
+    div.style.color = 'red';
+    div.style.display = 'inline';
+    form.prepend(div);   
+    setTimeout(()=>div.remove(),5000);
+  } else {
+    const formObj = {
+      name: ":" + formNameInput.value,
+      email: ":" + formEmail.value,
+      phone: ":" + formPhone.value,
+      message: ":" + formMessage.value,
+    };
+    addSendMail(formObj);
+    openPopup();
+  }
+};
+
+// sending the form data.
+function addSendMail(data){
+  console.log(data);
+  fetch(url,{
+    method: 'POST',
+    body:JSON.stringify(data)
+  })
+  .then(res => res.json())
+  .then(json =>{
+    console.log(json);
+  })
+}
+
+// retreiving the form data.
+function addSendMailGET(data){
+  const url1 = url + '?id=100';
+  fetch(url1)
+  .then(res => res.json())
+  .then(json =>{
+    console.log(json);
+  })
+}
+
+
+
+
