@@ -161,14 +161,15 @@ formSubmit.addEventListener("click", (e) => {
 
   // insert captcha here
 
-  // const hCaptcha = form.querySelector(
-  //   "textarea[name=g-recaptcha-response]"
-  // ).value;
-  // if (!hCaptcha) {
-  //   e.preventDefault();
-  //   alert("Please fill out captcha field");
-  //   return;
-  // }
+  const Captcha = form.querySelector(
+    "textarea[name=g-recaptcha-response]"
+  ).value;
+  if (!Captcha) {
+    e.preventDefault();
+    alert("Please fill out captcha field");
+    throw new Error("Captcha not complete");
+    return;
+  }
 
   // End insert captcha here
   console.log("here");
@@ -237,7 +238,7 @@ function closePopup() {
 
 // Connecting to google app script for POST AND GET and validations.
 const url =
-  "https://script.google.com/macros/s/AKfycbzJlI91zRpecgt_W3Yx4GmK0coZ4yvDHT8HygJnhATq71l2aVhQnGAqdiYD-n2pk2ob/exec";
+  "https://script.google.com/macros/s/AKfycbxfM8aAKq35FMJJ8if8zykRAtgutv4l-x3_y0SNYAFFR-gW3HLEI5pBXMUIsWo_ED5O/exec";
 const form = document.getElementById("my__form");
 
 // Validations for the form inside of html
@@ -267,10 +268,10 @@ function submitter(e) {
     setTimeout(()=>div.remove(),5000);
   } else {
     const formObj = {
-      name: ":" + formNameInput.value,
-      email: ":" + formEmail.value,
-      phone: ":" + formPhone.value,
-      message: ":" + formMessage.value,
+      name:formNameInput.value,
+      email:formEmail.value,
+      phone:formPhone.value,
+      message:formMessage.value,
     };
     addSendMail(formObj);
     openPopup();
