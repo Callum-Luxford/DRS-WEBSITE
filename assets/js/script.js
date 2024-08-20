@@ -238,7 +238,7 @@ function closePopup() {
 
 // Connecting to google app script for POST AND GET and validations.
 const url =
-  "https://script.google.com/macros/s/AKfycbxfM8aAKq35FMJJ8if8zykRAtgutv4l-x3_y0SNYAFFR-gW3HLEI5pBXMUIsWo_ED5O/exec";
+  "https://script.google.com/macros/s/AKfycbwrKmZ3ep-MhICGXa5jnbF9Mmz-EGsn05QHk8hfccxG7aheCAmCeU82qWDaJ7P3tTJu/exec";
 const form = document.getElementById("my__form");
 
 // Validations for the form inside of html
@@ -320,7 +320,6 @@ $(window).resize( scaleCaptcha );
 
 
 // SWIPER JS
-
 const swiper = new Swiper(".swiper", {
   loop: true,
   spaceBetween: 30,
@@ -353,8 +352,6 @@ const swiper = new Swiper(".swiper", {
     },
   },
 });
-
-
 // SWIPER JS
 
 
