@@ -302,5 +302,59 @@ function addSendMailGET(data){
 }
 
 
+// SCALE RECAPTCHA
+function scaleCaptcha(){
+  const captchaWidth = 1000;
+  const containerWidth = $(".g-recaptcha").width();
+  if(captchaWidth>containerWidth){
+    var captchaScale = (containerWidth/captchaWidth)*2;
+    $(".g-recaptcha").css({
+      "transform":`scale(${captchaScale})`
+    })
+  }
+}
+
+scaleCaptcha()
+$(window).resize( scaleCaptcha );
+// End SCALE RECAPTCHA
+
+
+// SWIPER JS
+
+const swiper = new Swiper(".swiper", {
+  loop: true,
+  spaceBetween: 30,
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  breakpoints: {
+    730: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+
+    540: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+
+    340: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    },
+  },
+});
+
+
+// SWIPER JS
 
 
