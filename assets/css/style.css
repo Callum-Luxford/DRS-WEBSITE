@@ -128,7 +128,7 @@ body {
 .section__container {
     max-width: var(--max-width);
     margin: auto;
-    padding: 5rem 1rem;
+    padding: 4rem 1rem;
 }
 
 .section__subheader {
@@ -846,6 +846,75 @@ i {
 
 /* End Recaptcha */
 
+/* TRUST SECTION */
+.trust__wrapper {
+    background-color: var(--white);
+}
+
+.trust__grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.trust__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.trust__item img {
+    height: 70px;
+    width: 70px;
+    margin-bottom: 1rem;
+    margin-left: .5rem;
+}
+
+.trust__item h4 {
+    margin-bottom: 0rem;
+    font-size: var(--fs-mmedium);
+    font-weight: 600;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.trust__header {
+    font-size: var(--fs-large);
+    font-weight: 800;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: -2rem;
+}
+
+/* TRUST GRID MEDIA */
+@media (width < 540px) {
+    .trust__grid {
+        grid-template-columns: repeat(1, minmax(150px, 1fr));
+    }
+}
+
+@media (width > 540px) {
+    .trust__grid {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+    }
+}
+
+@media (width > 700px) {
+    .trust__grid {
+        grid-template-columns: repeat(3, minmax(150px, 1fr));
+    }
+}
+
+@media (width > 1100px) {
+    .trust__grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+/* END TRUST GRID MEDIA */
+
+/* TRUST SECTION */
+
 
 /* MEDIA QUERIES FOR DESKTOP AND TABLETS */
 
@@ -874,6 +943,10 @@ i {
     .footer__grid {
         text-align: start;
     }
+
+    /* .trust__grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    } */
 
     /* .footer__form__container {
         max-width: 435px;
@@ -1188,11 +1261,13 @@ i {
     background-color: #00656b;
 }
 
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
     scale: 1.4;
 }
 
-.swiper-button-prev img, .swiper-button-next img {
+.swiper-button-prev img,
+.swiper-button-next img {
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
 }
 
