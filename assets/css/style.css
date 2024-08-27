@@ -888,9 +888,35 @@ i {
     margin-top: -2rem;
 }
 
+/* TRUST GRID MEDIA */
+@media (width < 540px) {
+    .trust__grid {
+        grid-template-columns: repeat(1, minmax(150px, 1fr));
+    }
+}
 
-/* CONTACT */
+@media (width > 540px) {
+    .trust__grid {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+    }
+}
 
+@media (width > 700px) {
+    .trust__grid {
+        grid-template-columns: repeat(3, minmax(150px, 1fr));
+    }
+}
+
+@media (width > 1100px) {
+    .trust__grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+/* END TRUST GRID MEDIA */
+
+/* END TRUST SECTION */
+
+/* CONTACT SECTION */
 .contact__section__wrapper {
     background-color: var(--off-white);
 
@@ -987,37 +1013,7 @@ i {
     background-color: var(--text-light);
 }
 
-/* END CONTACT */
-
-/* TRUST GRID MEDIA */
-@media (width < 540px) {
-    .trust__grid {
-        grid-template-columns: repeat(1, minmax(150px, 1fr));
-    }
-}
-
-@media (width > 540px) {
-    .trust__grid {
-        grid-template-columns: repeat(2, minmax(150px, 1fr));
-    }
-}
-
-@media (width > 700px) {
-    .trust__grid {
-        grid-template-columns: repeat(3, minmax(150px, 1fr));
-    }
-}
-
-@media (width > 1100px) {
-    .trust__grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-}
-
-/* END TRUST GRID MEDIA */
-
-/* TRUST SECTION */
-
+/* END CONTACT SECTION */
 
 /* MEDIA QUERIES FOR DESKTOP AND TABLETS */
 
