@@ -14,6 +14,7 @@
     --text-light: #475569;
     --text-extra-light: #f2f2f2;
     --white: #ffffff;
+    --off-white: #dcdcdc;
 
 
     --fs-xsmall: ;
@@ -666,7 +667,7 @@ form textarea::placeholder {
 
 .why__section__wrapper {
     /* background-color: var(--secondary-color); */
-    background-image: url(../images/L-VISW-streetscene-SAND-21-001.jpg);
+    background-image: url(../images/LONDON_WALL.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -848,7 +849,7 @@ i {
 
 /* TRUST SECTION */
 .trust__wrapper {
-    background-color: var(--white);
+    background-color: var(--off-white);
 }
 
 .trust__grid {
@@ -891,17 +892,18 @@ i {
 /* CONTACT */
 
 .contact__section__wrapper {
-    /* background-color: var(--secondary-color); */
-    background-image: url(../images/LONDON_WALL.jpeg);
+    background-color: var(--white);
+
+    /* background-image: url(../images/LONDON_WALL.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     z-index: var(--z-index-wrapper);
-    background-attachment: fixed;
+    background-attachment: fixed; */
 }
 
-.contact__section__wrapper::before {
+/* .contact__section__wrapper::before {
     content: "";
     display: block;
     top: 0;
@@ -912,6 +914,10 @@ i {
     position: absolute;
     opacity: .6;
     z-index: var(--z-index-overlay);
+} */
+
+.contact__section .section__header {
+    color: var(--primary-color);
 }
 
 .contact__grid {
@@ -926,6 +932,7 @@ i {
     gap: 2rem;
     color: var(--white);
     max-width: 450px;
+    border-bottom: 1rem solid var(--btn-primary-color);
 }
 
 /* @media (width > 400px) {
@@ -970,6 +977,10 @@ i {
 
 .left__contact {
     background-color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
 }
 
 .right__contact {
