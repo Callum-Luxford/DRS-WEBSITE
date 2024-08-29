@@ -455,6 +455,15 @@ i {
         gap: 1rem;
         padding: 2rem 2rem;
     }
+
+    .contact__container {
+        display: grid;
+        padding: 2rem 2rem;
+        gap: 2rem;
+        color: var(--white);
+        max-width: 450px;
+        border-bottom: 1rem solid var(--btn-primary-color);
+    }
 }
 
 .header__container .form__container h1 {
@@ -912,6 +921,7 @@ i {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 }
+
 /* END TRUST GRID MEDIA */
 
 /* END TRUST SECTION */
@@ -954,7 +964,7 @@ i {
 
 .contact__container {
     display: grid;
-    padding: 2rem;
+    padding: 2rem .8rem;
     gap: 2rem;
     color: var(--white);
     max-width: 450px;
@@ -1046,6 +1056,15 @@ i {
     .contact__grid {
         grid-template-columns: repeat(2, auto);
         justify-content: center;
+    }
+
+    .contact__container {
+        display: grid;
+        padding: 2rem;
+        gap: 2rem;
+        color: var(--white);
+        max-width: 450px;
+        border-bottom: 1rem solid var(--btn-primary-color);
     }
 
     /* .left__contact {
