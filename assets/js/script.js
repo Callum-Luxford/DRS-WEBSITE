@@ -124,14 +124,8 @@ const formMessage2 = document.querySelector(
 );
 const errorMessagesDiv2 = document.getElementById("error__message2");
 
-
 // form 1 inputs
-const inputs = [
-  formNameInput,
-  formPhone,
-  formEmail,
-  formMessage,
-];
+const inputs = [formNameInput, formPhone, formEmail, formMessage];
 
 // form 2 inputs
 const inputs2 = [formNameInput2, formPhone2, formEmail2, formMessage2];
@@ -281,7 +275,6 @@ function addSendMailGET(data) {
     });
 }
 
-
 // Form 2
 const validateInputs2 = () => {
   isFormValid = true;
@@ -403,7 +396,6 @@ function closePopup() {
 
 // Connecting to google app script for POST AND GET and validations.
 
-
 // SCALE RECAPTCHA
 function scaleCaptcha() {
   const captchaWidth = 1000;
@@ -415,7 +407,6 @@ function scaleCaptcha() {
     });
   }
 }
-
 scaleCaptcha();
 $(window).resize(scaleCaptcha);
 // End SCALE RECAPTCHA
