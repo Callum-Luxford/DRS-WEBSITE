@@ -108,7 +108,7 @@ const formMessage = document.querySelector(
 const errorMessagesDiv = document.getElementById("error__message");
 
 // Form 2 variables
-const form2 = document.getElementById("form__submit2");
+const form2submit = document.getElementById("form__submit2");
 
 const formNameInput2 = document.querySelector(
   "form[name='form__2'] input[name='name']"
@@ -276,6 +276,8 @@ function addSendMailGET(data) {
 }
 
 // Form 2
+const form2 = document.getElementById("form__2");
+form2.addEventListener("submit", submitter2);
 const validateInputs2 = () => {
   isFormValid = true;
   inputs2.forEach(removeError);
@@ -313,13 +315,13 @@ inputs2.forEach((input) => {
     validateInputs2();
   });
 });
-form2.addEventListener("click", (e) => {
+form2submit.addEventListener("click", (e) => {
   // e.preventDefault();
   validateInputs2();
 
   // insert captcha here
 
-  const Captcha = form.querySelector(
+  const Captcha = form2.querySelector(
     "textarea[name=g-recaptcha-response]"
   ).value;
   if (!Captcha) {
@@ -332,6 +334,41 @@ form2.addEventListener("click", (e) => {
   // End insert captcha here
   console.log("here");
 });
+
+function submitter2(e) {
+  console.log("submitted");
+  e.preventDefault();
+  let message = "";
+  if (formNameInput2.value.length < 3) {
+    message += `<br>- Name needs to be more than 3 characters.`;
+  }
+  if (formEmail2.value.length < 5) {
+    message += `<br>- Email needs to be a valid email.`;
+  }
+  if (formPhone2.value.length < 11) {
+    message += `<br>- Phone needs to be a valid UK Number.`;
+  }
+  if (formMessage2.value.length < 20) {
+    message += `<br>- Message needs to be greater than 20 characters`;
+  }
+  if (message) {
+    const div = document.createElement("div");
+    div.innerHTML = message;
+    div.style.color = "red";
+    div.style.display = "inline";
+    form2.prepend(div);
+    setTimeout(() => div.remove(), 5000);
+  } else {
+    const formObj = {
+      name: formNameInput2.value,
+      email: formEmail2.value,
+      phone: formPhone2.value,
+      message: formMessage2.value,
+    };
+    addSendMail(formObj);
+    openPopup();
+  }
+}
 
 // End Form Validation
 
