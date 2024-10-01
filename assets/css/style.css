@@ -1019,6 +1019,10 @@ i {
     gap: 2rem;
 }
 
+.contact__items ul a:link {
+    text-decoration: underline;
+}
+
 .right__contact {
     background-color: var(--text-light);
 }
