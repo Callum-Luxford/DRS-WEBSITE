@@ -215,7 +215,7 @@ formSubmit.addEventListener("click", (e) => {
 });
 // Validations for the form inside of html
 const url =
-  "https://script.google.com/macros/s/AKfycbwrKmZ3ep-MhICGXa5jnbF9Mmz-EGsn05QHk8hfccxG7aheCAmCeU82qWDaJ7P3tTJu/exec";
+  "https://script.google.com/macros/s/AKfycbxz9UNNvg8LvVohEuWdzEe8Rc_zxHgz1r9VYRXaJazDhoRbI5dNMQ05d2nsBBTsXO00/exec";
 const form = document.getElementById("my__form");
 
 form.addEventListener("submit", submitter);
