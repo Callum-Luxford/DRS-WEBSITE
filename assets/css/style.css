@@ -818,16 +818,19 @@ i {
 .contact__items ul {
     display: grid;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .contact__items li {
     display: flex;
     color: var(--primary-color);
+    flex-wrap: wrap;
 }
 
 .contact__items ul a {
     color: var(--text-extra-light);
     margin-left: .4rem;
+    flex-wrap: wrap;
 }
 
 .contact__items ul i {
