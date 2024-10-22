@@ -764,6 +764,12 @@ form textarea::placeholder {
     gap: 2rem;
 }
 
+@media (width > 740px) {
+    .footer__grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
+
 .footer__services {
     display: grid;
     gap: 1.5rem;
@@ -788,6 +794,7 @@ form textarea::placeholder {
 
 .footer__contact {
     display: grid;
+    flex-wrap: wrap;
     gap: 1.5rem;
 }
 
@@ -813,24 +820,29 @@ i {
 
 .footer__contact .contact__items {
     display: flex;
+    flex-wrap: wrap;
+    text-wrap: wrap;
 }
 
 .contact__items ul {
     display: grid;
     gap: 1rem;
     flex-wrap: wrap;
+    text-wrap: wrap;
 }
 
 .contact__items li {
     display: flex;
     color: var(--primary-color);
     flex-wrap: wrap;
+    text-wrap: wrap;
 }
 
 .contact__items ul a {
     color: var(--text-extra-light);
     margin-left: .4rem;
     flex-wrap: wrap;
+    text-wrap: wrap;
 }
 
 .contact__items ul i {
@@ -965,6 +977,20 @@ i {
     justify-content: center;
 }
 
+@media (width > 840px) {
+    .contact__grid {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .left__contact ul li {
+        flex-wrap: wrap;
+    }
+
+    .left__contact ul li:last-child {
+        flex-wrap: wrap;
+    }
+}
+
 .contact__container {
     display: grid;
     padding: 2rem .8rem;
@@ -1022,6 +1048,10 @@ i {
     gap: 2rem;
 }
 
+.left__contact ul li:last-child {
+    flex-wrap: wrap;
+}
+
 .contact__items ul a:link {
     text-decoration: underline;
 }
@@ -1033,7 +1063,6 @@ i {
 /* END CONTACT SECTION */
 
 /* MEDIA QUERIES FOR DESKTOP AND TABLETS */
-
 @media (width > 540px) {
     .card__grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -1051,19 +1080,15 @@ i {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
 
-    .footer__grid {
-        grid-template-columns: repeat(2, minmax(200px, 1fr));
-    }
-
     .footer__container,
     .footer__grid {
         text-align: start;
     }
 
-    .contact__grid {
+    /* .contact__grid {
         grid-template-columns: repeat(2, auto);
         justify-content: center;
-    }
+    } */
 
     .contact__container {
         display: grid;
